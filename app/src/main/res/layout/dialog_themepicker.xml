@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    >
+
+    <!--Row 1. (colors 1-4)-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/button_theme1"
+            android:backgroundTint="@color/theme1"
+            style="@style/themepicker_button"
+            />
+
+        <Button
+            android:id="@+id/button_theme2"
+            android:backgroundTint="@color/theme2"
+            style="@style/themepicker_button"
+            />
+
+        <Button
+            android:id="@+id/button_theme3"
+            android:backgroundTint="@color/theme3"
+            style="@style/themepicker_button"
+            />
+
+        <Button
+            android:id="@+id/button_theme4"
+            android:backgroundTint="@color/theme4"
+            style="@style/themepicker_button"
+            />
+
+    </LinearLayout>
+
+    <!--Row 2. (colors 5-8)-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/button_theme5"
+            android:backgroundTint="@color/theme5"
+            style="@style/themepicker_button"
+            />
+
+        <Button
+            android:id="@+id/button_theme6"
+            android:backgroundTint="@color/theme6"
+            style="@style/themepicker_button"
+            />
+
+        <Button
+            android:id="@+id/button_theme7"
+            android:backgroundTint="@color/theme7"
+            style="@style/themepicker_button"
+            />
+
+        <Button
+            android:id="@+id/button_theme8"
+            android:backgroundTint="@color/theme8"
+            style="@style/themepicker_button"
+            />
+
+    </LinearLayout>
+
+    <!--Row 3. (colors 9-12)-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/button_theme9"
+            android:backgroundTint="@color/theme9"
+            style="@style/themepicker_button"
+            />
+
+        <Button
+            android:id="@+id/button_theme10"
+            android:backgroundTint="@color/theme10"
+            style="@style/themepicker_button"
+            />
+
+        <Button
+            android:id="@+id/button_theme11"
+            android:backgroundTint="@color/theme11"
+            style="@style/themepicker_button"
+            />
+
+        <Button
+            android:id="@+id/button_theme12"
+            android:backgroundTint="@color/theme12"
+            style="@style/themepicker_button"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"></LinearLayout>
+
+</LinearLayout>

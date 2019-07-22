@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true"
+    android:gravity="right"
+    android:clipChildren="false"
+    >
+
+    <ImageButton
+        android:id="@+id/menu_main"
+        style="@style/menu_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="visible"
+        android:src="@drawable/icon_menu"
+        android:layout_marginTop="40dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/fab1_with_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/tv_menu_fun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/menu_fun_mode"
+            android:textColor="#FFF" />
+
+        <ImageButton
+            android:id="@+id/menu_fun"
+            style="@style/menu_button"
+            android:clickable="false"
+            android:focusable="true"
+            android:src="@drawable/icon_fun_mode" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fab2_with_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/tv_menu_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/menu_theme_picker"
+            android:textColor="#FFF" />
+
+        <ImageButton
+            android:id="@+id/menu_theme"
+            style="@style/menu_button"
+            android:clickable="false"
+            android:focusable="true"
+            android:src="@drawable/icon_palette" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fab3_with_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/tv_menu_goal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/menu_set_goal"
+            android:textColor="#FFF" />
+
+        <ImageButton
+            android:id="@+id/menu_goal"
+            style="@style/menu_button"
+            android:clickable="false"
+            android:focusable="true"
+            android:src="@drawable/icon_goal" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Simple Counter</string>
+    <string name="pref_file_key">simpleCounter.prefs</string>
+
+    <!--Settings keys-->
+    <string name="KEY_THEME">currentTheme</string>
+    <string name="KEY_CURRENTCOUNT">currentCount</string>
+    <string name="KEY_CURRENTGOAL">currentGoal</string>
+
+    <string name="textview_error_text">If you see this text, you\'ve found a bug. Congratulations!</string>
+    <string name="dialog_reset_title">Reset counter?</string>
+    <string name="dialog_theme_title">Pick background color:</string>
+
+    <string name="menu_fun_mode">FUN MODE</string>
+    <string name="menu_theme_picker">CHANGE THEME</string>
+    <string name="menu_set_goal">SET GOAL</string>
+    <string name="menu_hide_goal">REMOVE GOAL</string>
+</resources>
