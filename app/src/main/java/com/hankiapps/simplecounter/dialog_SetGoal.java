@@ -3,12 +3,14 @@ package com.hankiapps.simplecounter;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 public class dialog_SetGoal extends DialogFragment {
@@ -39,9 +41,16 @@ public class dialog_SetGoal extends DialogFragment {
         });
         dialog.show();
 
-        editText = view.findViewById(R.id.editText);
+        showKeyboard();
+
+        //editText.requestFocus();
 
         return dialog;
+    }
+
+    public void showKeyboard(){
+        InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
     }
 
     public void sendResult(int i) {

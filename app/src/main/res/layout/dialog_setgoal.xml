@@ -9,7 +9,8 @@
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:digits="1234567890"
-        android:maxLength="9"
-        />
+        android:maxLength="9" >
+    </EditText>
+
 
 </LinearLayout>
