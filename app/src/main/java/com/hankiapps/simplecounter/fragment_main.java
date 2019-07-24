@@ -174,6 +174,7 @@ public class fragment_main extends Fragment {
             }
         });
 
+        /*
         ib_menu_fun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -181,6 +182,7 @@ public class fragment_main extends Fragment {
                 //funModeEnabled ^= true;
             }
         });
+        */
 
         ib_menu_theme.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -211,6 +213,7 @@ public class fragment_main extends Fragment {
         });
 
         //Easteregg
+        //TODO: Easteregg doesn't work correctly if menu is open
         ib_menu_main.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
@@ -287,25 +290,25 @@ public class fragment_main extends Fragment {
         ib_menu_main.startAnimation(anim_menu_close_rotate);
 
         //Hide TextView animations
-        tv_menu_fun.startAnimation(anim_menu_close_text);
+        //tv_menu_fun.startAnimation(anim_menu_close_text);
         tv_menu_theme.startAnimation(anim_menu_close_text);
         tv_menu_goal.startAnimation(anim_menu_close_text);
 
         //Hide Icons animations
-        ib_menu_fun.startAnimation(anim_close_icons);
+        //ib_menu_fun.startAnimation(anim_close_icons);
         ib_menu_theme.startAnimation(anim_close_icons);
         ib_menu_goal.startAnimation(anim_close_icons);
 
         //Set everything invisible (can't use LinearLayout.setVisibility here, it cuts animations)
-        tv_menu_fun.setVisibility(View.INVISIBLE);
+        //tv_menu_fun.setVisibility(View.INVISIBLE);
         tv_menu_theme.setVisibility(View.INVISIBLE);
         tv_menu_goal.setVisibility(View.INVISIBLE);
-        ib_menu_fun.setVisibility(View.INVISIBLE);
+        //ib_menu_fun.setVisibility(View.INVISIBLE);
         ib_menu_theme.setVisibility(View.INVISIBLE);
         ib_menu_goal.setVisibility(View.INVISIBLE);
 
         //Set clickable false
-        ib_menu_fun.setClickable(false);
+        //ib_menu_fun.setClickable(false);
         ib_menu_theme.setClickable(false);
         ib_menu_goal.setClickable(false);
 
@@ -317,12 +320,12 @@ public class fragment_main extends Fragment {
         ib_menu_main.startAnimation(anim_menu_open_rotate);
 
         //TextView animations
-        tv_menu_fun.startAnimation(anim_menu_open_text);
+        //tv_menu_fun.startAnimation(anim_menu_open_text);
         tv_menu_theme.startAnimation(anim_menu_open_text);
         tv_menu_goal.startAnimation(anim_menu_open_text);
 
         //Display Icons animations
-        ib_menu_fun.startAnimation(anim_popup);
+        //ib_menu_fun.startAnimation(anim_popup);
         ib_menu_theme.startAnimation(anim_popup);
         ib_menu_goal.startAnimation(anim_popup);
 
@@ -331,12 +334,12 @@ public class fragment_main extends Fragment {
 
     private void setMenuVisible() {
         //Set everything visible
-        ll_menu_fun.setVisibility(View.VISIBLE);
+        //ll_menu_fun.setVisibility(View.VISIBLE);
         ll_menu_theme.setVisibility(View.VISIBLE);
         ll_menu_goal.setVisibility(View.VISIBLE);
 
         //Set icons clickable
-        ib_menu_fun.setClickable(true);
+        //ib_menu_fun.setClickable(true);
         ib_menu_theme.setClickable(true);
         ib_menu_goal.setClickable(true);
 

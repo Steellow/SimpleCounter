@@ -20,29 +20,7 @@
         android:layout_marginTop="40dp"
         />
 
-    <LinearLayout
-        android:id="@+id/fab1_with_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:visibility="invisible">
 
-        <TextView
-            android:id="@+id/tv_menu_fun"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="@string/menu_fun_mode"
-            android:textColor="#FFF" />
-
-        <ImageButton
-            android:id="@+id/menu_fun"
-            style="@style/menu_button"
-            android:clickable="false"
-            android:focusable="true"
-            android:src="@drawable/icon_fun_mode" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/fab2_with_text"
@@ -89,6 +67,30 @@
             android:clickable="false"
             android:focusable="true"
             android:src="@drawable/icon_goal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fab1_with_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/tv_menu_fun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/menu_fun_mode"
+            android:textColor="#FFF" />
+
+        <ImageButton
+            android:id="@+id/menu_fun"
+            style="@style/menu_button"
+            android:clickable="false"
+            android:focusable="true"
+            android:src="@drawable/icon_fun_mode" />
 
     </LinearLayout>
 

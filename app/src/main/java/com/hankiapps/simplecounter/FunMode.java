@@ -28,7 +28,7 @@ public final class FunMode {
     }
 
     public void test () {
-        Toast.makeText(this.context, "TESTTEST", Toast.LENGTH_LONG).show();
+        Toast.makeText(this.context, "TEST", Toast.LENGTH_LONG).show();
     }
 }
 
