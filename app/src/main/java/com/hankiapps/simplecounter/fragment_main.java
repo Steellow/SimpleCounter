@@ -203,11 +203,16 @@ public class fragment_main extends Fragment {
                     removePref(getString(R.string.KEY_CURRENTGOAL));
                     tv_menu_goal.setText(R.string.menu_set_goal);
                 } else {
-                    FragmentManager manager = getFragmentManager();
-                    dialog_SetGoal dialog = new dialog_SetGoal();
-                    dialog.setTargetFragment(fragment_main.this, RC_SET_GOAL);
-                    dialog.show(manager, null);
+                    openGoalDialog();
                 }
+            }
+        });
+
+        ib_menu_goal.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                openGoalDialog();
+                return true;
             }
         });
 
@@ -225,6 +230,13 @@ public class fragment_main extends Fragment {
         applyTheme(v, sharedPrefs.getInt(getString(R.string.KEY_THEME), ContextCompat.getColor(requireContext(), R.color.theme1)));
 
         return v;
+    }
+
+    private void openGoalDialog() {
+        FragmentManager manager = getFragmentManager();
+        dialog_SetGoal dialog = new dialog_SetGoal();
+        dialog.setTargetFragment(fragment_main.this, RC_SET_GOAL);
+        dialog.show(manager, null);
     }
 
     @Override
