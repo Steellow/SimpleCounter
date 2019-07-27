@@ -10,6 +10,7 @@
         android:inputType="phone"
         android:digits="1234567890"
         android:maxLength="9" >
+        <requestFocus/>
     </EditText>
 
 

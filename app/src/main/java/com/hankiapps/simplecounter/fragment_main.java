@@ -20,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -89,16 +90,9 @@ public class fragment_main extends Fragment {
 
         //Screen orientation save
         if(savedInstanceState != null) {
-            //currentCount = savedInstanceState.getInt(KEY_CURRENT_COUNT);
             isMenuOpen = savedInstanceState.getBoolean(KEY_MENU_OPEN);
-            //goalEnabled = savedInstanceState.getBoolean(KEY_GOAL_ENABLED);
-            //if(goalEnabled) {
-            //    goalMax = savedInstanceState.getInt(KEY_GOAL_MAX);
-            //}
         } else {
-            //currentCount = 0;
             isMenuOpen = false;
-            //goalEnabled = false;
         }
 
 
@@ -246,6 +240,10 @@ public class fragment_main extends Fragment {
             updateProgressBar();
             closeMenu();
             tv_menu_goal.setText(R.string.menu_hide_goal);
+
+            //Hide keyboard
+            //InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+            //imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
         }
     }
 
