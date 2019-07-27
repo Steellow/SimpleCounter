@@ -24,7 +24,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.mikhaellopez.circularprogressbar.CircularProgressBar;
 
@@ -37,7 +36,7 @@ public class fragment_main extends Fragment {
     private ConstraintLayout background;
     private ImageButton ib_menu_goal, ib_menu_main, ib_menu_fun, ib_menu_theme;
     private LinearLayout ll_menu_fun, ll_menu_theme, ll_menu_goal;
-    private Animation anim_menu_close_text, anim_menu_open_text, anim_menu_open_rotate, anim_menu_close_rotate, anim_popup, anim_close_icons, anim_easteregg;
+    private Animation anim_menu_close_text, anim_menu_open_text, anim_menu_open_rotate, anim_menu_close_rotate, anim_popup, anim_close_icons, anim_easteregg, anim_easteregg_open;
     private TextView tv_menu_fun, tv_menu_theme, tv_menu_goal;
     private CircularProgressBar progressBar;
 
@@ -120,6 +119,7 @@ public class fragment_main extends Fragment {
         anim_popup = AnimationUtils.loadAnimation(getContext(), R.anim.popup);
         anim_close_icons = AnimationUtils.loadAnimation(getContext(), R.anim.menu_close_icons);
         anim_easteregg = AnimationUtils.loadAnimation(getContext(), R.anim.easteregg);
+        anim_easteregg_open = AnimationUtils.loadAnimation(getContext(), R.anim.easteregg_open);
 
         this.counter = v.findViewById(R.id.textView);
         progressBar = v.findViewById(R.id.progressBar);
@@ -192,7 +192,6 @@ public class fragment_main extends Fragment {
             }
         });
 
-        //TODO: Long click to set goal
         ib_menu_goal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -217,11 +216,14 @@ public class fragment_main extends Fragment {
         });
 
         //Easteregg
-        //TODO: Easteregg doesn't work correctly if menu is open
         ib_menu_main.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                ib_menu_main.startAnimation(anim_easteregg);
+                if(!isMenuOpen) {
+                    ib_menu_main.startAnimation(anim_easteregg);
+                } else {
+                    ib_menu_main.startAnimation(anim_easteregg_open);
+                }
                 return true;
             }
         });
