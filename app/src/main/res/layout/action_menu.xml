@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--TODO: Menu is too big on smaller screens-->
+<!--TODO: "Set value"?-->
+<!--TODO: Menu in the wrong place when reverse-landscape orientation-->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"

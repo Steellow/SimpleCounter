@@ -152,9 +152,10 @@ public class fragment_main extends Fragment {
             tv_menu_goal.setText(getText(R.string.menu_hide_goal));
         }
 
-        //Menu button bigger touch area
-        //TODO: Increase every button's touch area
+        //Bigger touch area in menu buttons
         increaseTouchArea(ib_menu_main);
+        increaseTouchArea(ib_menu_goal);
+        increaseTouchArea(ib_menu_theme);
 
         if(isMenuOpen) setMenuVisible();
 
@@ -179,6 +180,8 @@ public class fragment_main extends Fragment {
         });
         */
 
+        //TODO: Menu item TextViews don't have ClickListener
+
         ib_menu_theme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -189,6 +192,7 @@ public class fragment_main extends Fragment {
             }
         });
 
+        //TODO: Long click to set goal
         ib_menu_goal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -242,7 +246,7 @@ public class fragment_main extends Fragment {
             closeMenu();
             tv_menu_goal.setText(R.string.menu_hide_goal);
 
-            //Hide keyboard
+            //Hide keyboard //TODO: Bug when landscape mode, keyboard doesn't always hide
             InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
         }
