@@ -32,7 +32,7 @@ public class dialog_SetGoal extends DialogFragment {
         dialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                //Nothing here
+                showKeyboard();
             }
         });
         dialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener() {

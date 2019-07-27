@@ -153,6 +153,7 @@ public class fragment_main extends Fragment {
         }
 
         //Menu button bigger touch area
+        //TODO: Increase every button's touch area
         increaseTouchArea(ib_menu_main);
 
         if(isMenuOpen) setMenuVisible();
@@ -242,8 +243,8 @@ public class fragment_main extends Fragment {
             tv_menu_goal.setText(R.string.menu_hide_goal);
 
             //Hide keyboard
-            //InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
-            //imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
+            InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
         }
     }
 
