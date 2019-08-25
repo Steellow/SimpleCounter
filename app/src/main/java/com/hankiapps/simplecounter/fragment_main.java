@@ -179,9 +179,7 @@ public class fragment_main extends Fragment {
             }
         });
         */
-
-        //TODO: Menu item TextViews don't have ClickListener
-
+        
         ib_menu_theme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -211,6 +209,28 @@ public class fragment_main extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 openGoalDialog();
+                return true;
+            }
+        });
+
+        tv_menu_theme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ib_menu_theme.performClick();
+            }
+        });
+
+        tv_menu_goal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ib_menu_goal.performClick();
+            }
+        });
+
+        tv_menu_goal.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                ib_menu_goal.performLongClick();
                 return true;
             }
         });
