@@ -275,6 +275,8 @@ public class fragment_main extends Fragment {
         savedInstanceState.putInt(KEY_GOAL_MAX, goalMax);
     }
 
+
+
     private void savePref(String KEY, int i) {
         SharedPreferences sharedPrefs = getActivity().getSharedPreferences(PREF_FILE_KEY, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPrefs.edit();
